@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>العزوم — ملخص تفاعلي</title>
+<meta name="description" content="ملخص تفاعلي ثلاثي الأبعاد لدرس العزوم والطاقة الحركية الدورانية — ثانية ثانوي">
+<meta name="author" content="Dr Belmekhfi Mohammed">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_DZ">
+<meta property="og:title" content="العزوم: لماذا يدور الجسم؟ — ملخص تفاعلي ثلاثي الأبعاد">
+<meta property="og:description" content="ثانية ثانوي • ملخص الدرس مع مختبرات ثلاثية الأبعاد وأسئلة امتحان وتمارين محلولة — إعداد Dr Belmekhfi Mohammed">
+<meta name="theme-color" content="#0b1220">
+<link rel="stylesheet" href="assets/vendor/katex/katex.min.css">
+<link rel="stylesheet" href="css/style.css?v=8">
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="kicker">ثانية ثانوي • الشعب العلمية والرياضية • العمل والطاقة الحركية الدورانية</div>
+      <h1>العزوم: <span class="accent">لماذا يدور الجسم؟</span></h1>
+      <p>ملخص الدرس كاملا مع مختبرات ثلاثية الأبعاد: غيّر القوة وموضعها واتجاهها، وشاهد العزم يتغيّر أمامك، ثم درّب نفسك على أسئلة الامتحان وتمارينه المحلولة.</p>
+      <div class="meta">
+        <span>إعداد: <b class="ltr">Dr Belmekhfi Mohammed</b></span>
+        <span>المرجع: سلسلة الأستاذ فرقاني فارس <span class="ltr">2AS-U03-1</span></span>
+      </div>
+    </div>
+    <div class="hero-stage" id="hero3d" aria-hidden="true"><div class="hero-formula" data-tex="\color{#a487ff}{M} = \color{#ff7650}{F}\cdot\color{#2cc3b1}{d}"></div></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="أقسام الدرس">
+  <div class="toc-inner">
+    <a href="#rot"><span class="n">1</span>الدوران</a>
+    <a href="#torque"><span class="n">2</span>عزم قوة</a>
+    <a href="#couple"><span class="n">3</span>المزدوجة</a>
+    <a href="#inertia"><span class="n">4</span>عزم العطالة</a>
+    <a href="#balance"><span class="n">5</span>التوازن</a>
+    <a href="#energy"><span class="n">6</span>العمل والطاقة</a>
+    <a href="#method"><span class="n">7</span>منهجية الامتحان</a>
+    <a href="#quiz"><span class="n">8</span>اختبر نفسك</a>
+    <a href="#ex"><span class="n">9</span>تمارين محلولة</a>
+    <a href="#sheet"><span class="n">10</span>ورقة القوانين</a>
+    <button type="button" class="btn2 theme" id="themeBtn" aria-label="تبديل الوضع الليلي">◐</button>
+  </div>
+</nav>
+
+<main>
+
+<!-- 1 ─────────────────────────────── -->
+<section class="unit" id="rot">
+  <div class="unit-head"><span class="num">1</span><h2>لغة الدوران: الزاوية والسرعة الزاوية</h2></div>
+  <p class="lead">في الدوران حول محور ثابت تمسح كل نقاط الجسم الصلب <b>الزاوية نفسها</b> خلال المدة نفسها، لكنها لا تقطع <b>المسافة نفسها</b>: النقطة البعيدة عن المحور أسرع.</p>
+  <div class="grid2">
+    <div class="card def axis">
+      <span class="tag">الفاصلة الزاوية والمسافة</span>
+      <p>عندما تنتقل نقطة من <span data-tex="M_1"></span> إلى <span data-tex="M_2"></span> على دائرة نصف قطرها <span data-tex="R"></span> فهي تمسح الزاوية <span data-tex="\theta"></span> (بالراديان) وتقطع القوس:</p>
+      <div class="f" data-tex="S = R\cdot\theta"></div>
+    </div>
+    <div class="card def energy">
+      <span class="tag">السرعة الزاوية والسرعة الخطية</span>
+      <div class="f" data-tex="\omega_m=\dfrac{\Delta\theta}{\Delta t}\qquad v_m=\dfrac{S}{\Delta t}"></div>
+      <div class="f" data-tex="\omega=\dfrac{v}{R}\;\Longrightarrow\; v=R\cdot\omega"></div>
+      <p class="note">الوحدات: <span data-tex="\theta\ (\text{rad}),\ \omega\ (\text{rad/s}),\ v\ (\text{m/s})"></span></p>
+    </div>
+  </div>
+  <div class="lab" id="lab-rot"></div>
+  <div class="grid3">
+    <div class="card"><h3>دورة واحدة</h3><div class="f" data-tex="1\ \text{tr}=2\pi\ \text{rad}"></div></div>
+    <div class="card"><h3>n دورة في الدقيقة</h3><div class="f" data-tex="\omega=\dfrac{2\pi n}{60}"></div></div>
+    <div class="card"><h3>عقرب الثواني</h3><div class="f" data-tex="\omega=\dfrac{2\pi}{60}\approx0{,}10\ \text{rad/s}"></div></div>
+  </div>
+</section>
+
+<!-- 2 ─────────────────────────────── -->
+<section class="unit" id="torque">
+  <div class="unit-head"><span class="num">2</span><h2>عزم قوة بالنسبة لمحور دوران</h2></div>
+  <p class="lead">لماذا نفتح الباب من المقبض البعيد عن المفصّلات؟ لأن الأثر الدوراني للقوة لا يتعلّق بشدّتها فقط، بل بـ<b>بُعد حاملها عن المحور</b>. هذا الأثر نقيسه بالعزم.</p>
+  <div class="grid2">
+    <div class="card def">
+      <span class="tag">التعريف</span>
+      <p>عزم القوة <span data-tex="\vec F"></span> بالنسبة لمحور دوران <span data-tex="\Delta"></span>، ويرمز له <span data-tex="M_{/\Delta}(\vec F)"></span>، هو <b>مقدار جبري</b> يعبّر عن شدّة الفعل الدوراني للقوة: كلما كان أكبر كان أثرها الدوراني أكبر.</p>
+      <div class="f" data-tex="\color{#7a55d6}{M_{/\Delta}(\vec F)} = \pm\,\color{#e2552f}{F}\cdot\color{#13998a}{d}\qquad (\text{N}\cdot\text{m})"></div>
+    </div>
+    <div class="card def arm">
+      <span class="tag">الذراع d</span>
+      <p><b class="c-arm">ذراع القوة</b> هو <b>المسافة العمودية</b> بين المحور وحامل القوة، وليس المسافة بين المحور ونقطة التطبيق.</p>
+      <p>إذا كانت القوة تصنع زاوية <span data-tex="\alpha"></span> مع المستقيم <span data-tex="OA"></span>:</p>
+      <div class="f" data-tex="d = OA\cdot\sin\alpha"></div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:14px">
+    <span class="tag">الإشارة</span>
+    <p>نختار جهة موجبة للدوران. إذا كانت القوة تدير الجسم في الجهة الموجبة فعزمها <span data-tex="+F\cdot d"></span>، وإذا أدارته في الجهة السالبة فعزمها <span data-tex="-F\cdot d"></span>.</p>
+  </div>
+  <div class="lab" id="lab-torque"></div>
+  <div class="grid3">
+    <div class="card def force"><h3>حامل القوة يمرّ بالمحور</h3><p>الذراع معدوم، فلا أثر دوراني.</p><div class="f" data-tex="d=0\Rightarrow M=0"></div></div>
+    <div class="card def force"><h3>القوة موازية للمحور</h3><p>القوة لا تستطيع إدارة الجسم حول هذا المحور.</p><div class="f" data-tex="M=0"></div></div>
+    <div class="card def arm"><h3>القوة مماسيّة للمسار</h3><p>الذراع يساوي نصف القطر.</p><div class="f" data-tex="d=R\Rightarrow M=\pm F\cdot R"></div></div>
+  </div>
+  <p class="note" style="margin-top:14px"><b>ملاحظة:</b> إذا خضع جسم قابل للدوران حول محور ثابت لعدّة قوى، بعضها يديره في الجهة الموجبة وبعضها في السالبة، فإنه يدور في الجهة التي يكون فيها <b>مجموع العزوم أكبر</b>.</p>
+</section>
+
+<!-- 3 ─────────────────────────────── -->
+<section class="unit" id="couple">
+  <div class="unit-head"><span class="num">3</span><h2>عزم المزدوجة</h2></div>
+  <p class="lead">يداك على مقود السيارة: قوتان متساويتان في الشدّة، متعاكستان في الجهة، وحاملاهما مختلفان. محصّلتهما معدومة فلا ينسحب المقود، لكنه يدور.</p>
+  <div class="grid2">
+    <div class="card def">
+      <span class="tag">التعريف</span>
+      <p>تُدعى جملة قوتين <span data-tex="(\vec F_1,\vec F_2)"></span> محصّلتهما معدومة وليس لهما نفس الحامل <b>مزدوجة</b>.</p>
+      <div class="f" data-tex="M = \pm F\cdot d"></div>
+      <p>حيث <span data-tex="d"></span> هو <b class="c-arm">ذراع المزدوجة</b>: البعد بين حاملي القوتين. في المقود <span data-tex="d=2R"></span>.</p>
+    </div>
+    <div class="card def axis">
+      <span class="tag">ميزة مهمّة</span>
+      <p>عزم المزدوجة <b>لا يتعلّق بموضع محور الدوران</b>، بل بالبعد بين حاملي القوتين فقط. لذلك نقول «عزم المزدوجة» دون ذكر المحور، أما عزم قوة واحدة فيجب دائما ذكر المحور الذي يُحسب بالنسبة إليه.</p>
+    </div>
+  </div>
+  <div class="lab" id="lab-couple"></div>
+</section>
+
+<!-- 4 ─────────────────────────────── -->
+<section class="unit" id="inertia">
+  <div class="unit-head"><span class="num">4</span><h2>عزم العطالة</h2></div>
+  <p class="lead">جسمان لهما الكتلة نفسها قد لا يدوران بالسهولة نفسها: كلما ابتعدت الكتلة عن المحور صعب تدويره. عزم العطالة <span data-tex="J_\Delta"></span> يقيس ذلك، ووحدته <span data-tex="\text{kg}\cdot\text{m}^2"></span>.</p>
+  <div class="table-wrap">
+    <table class="j">
+      <thead><tr><th>الجسم (الكتلة M)</th><th>المحور <span data-tex="\Delta_0"></span></th><th>عزم العطالة</th></tr></thead>
+      <tbody>
+        <tr><td>حلقة نصف قطرها R</td><td>يمرّ من مركزها، عمودي على مستويها</td><td class="fx" data-tex="J=MR^2"></td></tr>
+        <tr><td>قرص نصف قطره R</td><td>يمرّ من مركزه، عمودي عليه</td><td class="fx" data-tex="J=\tfrac12MR^2"></td></tr>
+        <tr><td>أسطوانة مجوّفة</td><td>محورها</td><td class="fx" data-tex="J=MR^2"></td></tr>
+        <tr><td>أسطوانة مملوءة</td><td>محورها</td><td class="fx" data-tex="J=\tfrac12MR^2"></td></tr>
+        <tr><td>كرة مملوءة</td><td>يمرّ من مركزها</td><td class="fx" data-tex="J=\tfrac25MR^2"></td></tr>
+        <tr><td>ساق طولها L</td><td>يمرّ من منتصفها، عمودي عليها</td><td class="fx" data-tex="J=\tfrac1{12}ML^2"></td></tr>
+        <tr><td>نقطة مادية كتلتها m</td><td>على بعد d من المحور</td><td class="fx" data-tex="J=md^2"></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="grid2" style="margin-top:14px">
+    <div class="card def axis">
+      <span class="tag">نظرية هويغنز</span>
+      <p>عزم عطالة جسم صلب بالنسبة لمحور <span data-tex="\Delta"></span> لا يمرّ بمركزه يساوي عزم عطالته بالنسبة لمحوره <span data-tex="\Delta_0"></span> (الموازي لـ <span data-tex="\Delta"></span> والمارّ بمركزه) مضافا إليه جداء كتلته في مربّع البعد بين المحورين:</p>
+      <div class="f" data-tex="J_{/\Delta}=J_{/\Delta_0}+m\,d^2"></div>
+    </div>
+    <div class="card def energy">
+      <span class="tag">عزم عطالة جملة</span>
+      <p>عزم عطالة جملة بالنسبة لمحور هو <b>مجموع</b> عزوم عطالة أجزائها بالنسبة للمحور نفسه:</p>
+      <div class="f" data-tex="J_{/\Delta}=J_1+J_2+J_3+\dots"></div>
+      <p class="note">مثال: ساق تدور حول طرفها: <span data-tex="\tfrac1{12}mL^2+m\left(\tfrac L2\right)^2=\tfrac13mL^2"></span></p>
+    </div>
+  </div>
+  <div class="lab" id="lab-inertia"></div>
+</section>
+
+<!-- 5 ─────────────────────────────── -->
+<section class="unit" id="balance">
+  <div class="unit-head"><span class="num">5</span><h2>توازن جسم صلب</h2></div>
+  <p class="lead">الميزان والرافعة والمسطرة المعلّقة: كلها أجسام قابلة للدوران تبقى ساكنة عندما «تتعادل» عزوم القوى المؤثّرة فيها.</p>
+  <div class="grid2">
+    <div class="card def"><span class="tag">جسم قابل للدوران حول محور ثابت</span><div class="f" data-tex="\sum M_{/\Delta}(\vec F_{ext})=0"></div></div>
+    <div class="card def force"><span class="tag">جسم صلب خاضع لقوى متلاقية</span><div class="f" data-tex="\sum \vec F_{ext}=\vec 0"></div></div>
+  </div>
+  <p class="note" style="margin-top:12px"><b>تذكّر:</b> قوة ردّ فعل المحور <span data-tex="\vec R"></span> يمرّ حاملها بالمحور، فعزمها دائما معدوم، وكذلك ثقل جسم مركز ثقله على المحور.</p>
+  <div class="lab" id="lab-balance"></div>
+</section>
+
+<!-- 6 ─────────────────────────────── -->
+<section class="unit" id="energy">
+  <div class="unit-head"><span class="num">6</span><h2>العمل والطاقة الحركية الدورانية</h2></div>
+  <p class="lead">العزم الذي يدير الجسم ينجز عملا، وهذا العمل يتحوّل إلى طاقة حركية دورانية أو يُقدَّم إلى جسم آخر (رفع حمولة مثلا).</p>
+  <div class="grid3">
+    <div class="card def"><span class="tag">عمل عزم ثابت</span><div class="f" data-tex="W=M_{/\Delta}\cdot\theta"></div><p class="note"><span data-tex="\theta"></span> بالراديان: <span data-tex="\theta=2\pi n"></span></p></div>
+    <div class="card def energy"><span class="tag">الطاقة الحركية الدورانية</span><div class="f" data-tex="E_c=\tfrac12J_\Delta\,\omega^2"></div></div>
+    <div class="card def force"><span class="tag">الاستطاعة</span><div class="f" data-tex="P=\dfrac{W}{\Delta t}=M\cdot\omega"></div></div>
+  </div>
+  <div class="grid2" style="margin-top:14px">
+    <div class="card def axis">
+      <span class="tag">جسم يتدحرج (حركة انسحابية دورانية)</span>
+      <div class="f" data-tex="E_c=\tfrac12mv^2+\tfrac12J_\Delta\omega^2"></div>
+      <p>كرة مملوءة تتدحرج دون انزلاق (<span data-tex="v=R\omega"></span>): <span data-tex="E_c=\tfrac12mv^2+\tfrac15mv^2=\tfrac7{10}mv^2"></span></p>
+    </div>
+    <div class="card def energy">
+      <span class="tag">مبدأ انحفاظ الطاقة</span>
+      <div class="f" data-tex="E_A+E_{\text{مكتسبة}}-E_{\text{مقدّمة}}=E_B"></div>
+      <p>عمل الاحتكاك ومزدوجة الكبح طاقة <b>مقدّمة</b>: نكتب قيمتها المطلقة مع إشارة ناقص.</p>
+    </div>
+  </div>
+  <div class="lab" id="lab-energy"></div>
+</section>
+
+<!-- 7 ─────────────────────────────── -->
+<section class="unit" id="method">
+  <div class="unit-head"><span class="num">7</span><h2>منهجية الامتحان</h2></div>
+  <div class="grid2">
+    <div class="card">
+      <h3>حساب عزم قوة في 4 خطوات</h3>
+      <ol class="steps">
+        <li>حدّد <b class="c-axis">المحور</b> واختر <b>الجهة الموجبة</b> للدوران (سهم + على الشكل).</li>
+        <li>مدّد <b class="c-force">حامل القوة</b> بخط متقطّع، وأسقط عليه عمودا من المحور: هذا هو <b class="c-arm">الذراع d</b>.</li>
+        <li>احسب d من الشكل: <span data-tex="d=OA\sin\alpha"></span> أو <span data-tex="d=R"></span> أو <span data-tex="d=0"></span>.</li>
+        <li>اكتب <span data-tex="M=\pm F\cdot d"></span> بالإشارة المناسبة، ثم عوّض بوحدات النظام الدولي.</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h3>انحفاظ الطاقة في الدوران</h3>
+      <ol class="steps">
+        <li>الجملة المدروسة، والمرجع (سطحي أرضي غاليلي)، والقوى الخارجية.</li>
+        <li>مثّل الحصيلة الطاقوية بين الوضعين A و B (خزّانات + أسهم التحويل).</li>
+        <li>اكتب <span data-tex="E_A+E_{\text{مكتسبة}}-E_{\text{مقدّمة}}=E_B"></span> واستبدل كل حدّ: <span data-tex="\tfrac12J\omega^2"></span>، <span data-tex="M\theta"></span>، <span data-tex="mgh"></span>.</li>
+        <li>عزل المجهول، ثم التطبيق العددي مع الوحدة.</li>
+      </ol>
+    </div>
+  </div>
+  <h3 style="margin:22px 0 10px">أخطاء شائعة تكلّف نقاطا</h3>
+  <div class="mist">
+    <div class="card"><span class="x">✗</span> أخذ المسافة بين المحور و<b>نقطة التطبيق</b> ذراعا. <br><span class="v">✓</span> الذراع عمودي على <b>حامل</b> القوة.</div>
+    <div class="card"><span class="x">✗</span> التعويض بالزاوية بالدرجات أو بعدد الدورات في <span data-tex="W=M\theta"></span>. <br><span class="v">✓</span> <span data-tex="\theta=2\pi n"></span> راديان.</div>
+    <div class="card"><span class="x">✗</span> نسيان إشارة العزم عند جمع العزوم. <br><span class="v">✓</span> اختر جهة موجبة وطبّقها على كل القوى.</div>
+    <div class="card"><span class="x">✗</span> نسيان عزم <span data-tex="\vec R"></span> أو تجاهله دون تبرير. <br><span class="v">✓</span> <span data-tex="M(\vec R)=0"></span> لأن حامله يمرّ بالمحور: اكتب ذلك.</div>
+    <div class="card"><span class="x">✗</span> نسيان تحويل <span data-tex="\text{g}"></span> و<span data-tex="\text{cm}"></span> إلى <span data-tex="\text{kg}"></span> و<span data-tex="\text{m}"></span> قبل حساب <span data-tex="J"></span>. <br><span class="v">✓</span> حوّل أوّلا، فالخطأ يُضاعَف بالتربيع.</div>
+    <div class="card"><span class="x">✗</span> استعمال <span data-tex="\tfrac12mv^2"></span> وحدها لجسم يتدحرج. <br><span class="v">✓</span> أضف <span data-tex="\tfrac12J\omega^2"></span>.</div>
+  </div>
+</section>
+
+<!-- 8 ─────────────────────────────── -->
+<section class="unit" id="quiz">
+  <div class="unit-head"><span class="num">8</span><h2>اختبر نفسك</h2></div>
+  <p class="lead">اختر إجابة لكل سؤال، فيظهر التصحيح والتبرير فورا.</p>
+  <div class="quiz" id="quizBox"></div>
+  <div class="score no-print" id="score">النتيجة: 0 / 0</div>
+</section>
+
+<!-- 9 ─────────────────────────────── -->
+<section class="unit" id="ex">
+  <div class="unit-head"><span class="num">9</span><h2>تمارين محلولة خطوة بخطوة</h2></div>
+  <p class="lead">حاول حلّ كل سؤال على ورقتك أوّلا، ثم اكشف الحلّ خطوة خطوة. التمارين من سلسلة الأستاذ فرقاني فارس، والرقم بين قوسين هو رقمها في السلسلة.</p>
+  <div id="exBox"></div>
+</section>
+
+<!-- 10 ─────────────────────────────── -->
+<section class="unit" id="sheet">
+  <div class="unit-head"><span class="num">10</span><h2>ورقة القوانين</h2>
+    <button type="button" class="btn2 primary no-print" onclick="window.print()" style="margin-inline-start:auto">اطبع الورقة</button></div>
+  <div class="sheet">
+    <div class="card"><h3>الدوران</h3><div class="f" data-tex="S=R\theta\quad v=R\omega\quad \omega=\dfrac{\Delta\theta}{\Delta t}=\dfrac{2\pi n}{60}"></div></div>
+    <div class="card"><h3>عزم قوة</h3><div class="f" data-tex="M_{/\Delta}(\vec F)=\pm F\,d,\quad d=OA\sin\alpha"></div><p class="note">d = 0 إذا مرّ الحامل بالمحور أو كانت القوة موازية له؛ d = R للقوة المماسية.</p></div>
+    <div class="card"><h3>المزدوجة</h3><div class="f" data-tex="M=\pm F\,d\quad (d=2R\ \text{للمقود})"></div><p class="note">لا يتعلّق بموضع المحور، ومحصّلة قوتيها معدومة.</p></div>
+    <div class="card"><h3>عزوم العطالة</h3><div class="f" data-tex="\begin{aligned}&\text{حلقة، أسطوانة مجوفة}: MR^2\\&\text{قرص، أسطوانة مملوءة}: \tfrac12MR^2\\&\text{كرة}: \tfrac25MR^2\quad\text{ساق}: \tfrac1{12}ML^2\\&\text{نقطة مادية}: md^2\end{aligned}"></div></div>
+    <div class="card"><h3>هويغنز</h3><div class="f" data-tex="J_{/\Delta}=J_{/\Delta_0}+md^2"></div></div>
+    <div class="card"><h3>التوازن</h3><div class="f" data-tex="\sum M_{/\Delta}=0\qquad \sum\vec F=\vec0"></div></div>
+    <div class="card"><h3>العمل والطاقة</h3><div class="f" data-tex="W=M\theta\quad E_c=\tfrac12J\omega^2\quad P=M\omega"></div><div class="f" data-tex="E_c(\text{تدحرج})=\tfrac12mv^2+\tfrac12J\omega^2"></div></div>
+    <div class="card"><h3>انحفاظ الطاقة</h3><div class="f" data-tex="E_A+E_{\text{مكتسبة}}-E_{\text{مقدّمة}}=E_B"></div></div>
+  </div>
+  <div class="print-sig">Dr Belmekhfi Mohammed — المرجع: سلسلة الأستاذ فرقاني فارس 2AS-U03-1</div>
+</section>
+
+</main>
+
+<footer>
+  <div class="sig">Dr Belmekhfi Mohammed</div>
+  <div>ملخص تفاعلي: العمل والطاقة الحركية الدورانية — ثانية ثانوي</div>
+  <div class="src">المحتوى مبني على سلسلة «المنجد في العلوم الفيزيائية» للأستاذ فرقاني فارس (2AS-U03-1)</div>
+</footer>
+
+<script src="assets/vendor/three.bundle.min.js"></script>
+<script src="assets/vendor/katex/katex.min.js"></script>
+<script src="js/core.js?v=8"></script>
+<script src="js/labs/hero.js?v=8"></script>
+<script src="js/labs/rotation.js?v=8"></script>
+<script src="js/labs/torque.js?v=8"></script>
+<script src="js/labs/couple.js?v=8"></script>
+<script src="js/labs/inertia.js?v=8"></script>
+<script src="js/labs/balance.js?v=8"></script>
+<script src="js/labs/energy.js?v=8"></script>
+<script src="js/exam.js?v=8"></script>
+<script src="js/main.js?v=8"></script>
+</body>
+</html>
